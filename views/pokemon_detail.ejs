@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>ID</td><td><%= data.id %></td></tr>
+    <tr><td>ポケモン名</td><td><%= data.name %></td></tr>
+    <tr><td>持ち物</td><td><%= data.goods %></td></tr>
+    <tr><td>特性</td><td><%= data.skill %></td></tr>
+    <tr><td>技</td><td><%= data.move %></td></tr>
+    <tr><td>性格</td><td><%= data.nature %></td></tr>
+    <tr><td>努力値</td><td><%= data.point %></td></tr>
+    <tr><td>テラスタル</td><td><%= data.teras %></td></tr>
+  </table>
+  
+  <br>
+  <a href="/pokemon/edit/<%= id %>">編集</a> 
+  <a href="/pokemon/delete/<%= id %>" onclick="return confirm('本当に削除しますか？');">削除</a>
+  
+  <br><br>
+  <a href="/pokemon">一覧に戻る</a>
+</body>
+</html>

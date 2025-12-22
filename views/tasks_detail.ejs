@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.task %></title>
+</head>
+<body>
+  <h2><%= data.task %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>ID</td><td><%= data.id %></td></tr>
+    <tr><td>タスク名</td><td><%= data.task %></td></tr>
+    <tr><td>期限</td><td><%= data.kigen %></td></tr>
+    <tr><td>詳細</td><td><%= data.detail %></td></tr>
+  </table>
+  
+  <br>
+  <a href="/tasks/edit/<%= id %>">編集</a> 
+  
+  <a href="/tasks/delete/<%= id %>" onclick="return confirm('本当に削除しますか？');">削除</a>
+  
+  <br><br>
+  <a href="/tasks">タスク一覧に戻る</a>
+</body>
+</html>

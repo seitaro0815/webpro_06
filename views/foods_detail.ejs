@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>ID</td><td><%= data.id %></td></tr>
+    <tr><td>食べ物</td><td><%= data.name %></td></tr>
+    <tr><td>賞味期限</td><td><%= data.limit %></td></tr>
+    <tr><td>個数</td><td><%= data.qty %></td></tr>
+    <tr><td>備考</td><td><%= data.memo %></td></tr>
+  </table>
+  
+  <br>
+  <a href="/foods/edit/<%= id %>">編集</a> 
+  <a href="/foods/delete/<%= id %>" onclick="return confirm('本当に削除しますか？');">削除</a>
+  
+  <br><br>
+  <a href="/foods">一覧に戻る</a>
+</body>
+</html>

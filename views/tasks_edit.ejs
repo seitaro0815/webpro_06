@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.task %></title>
+</head>
+<body>
+  <h2><%= data.task %>の編集</h2>
+  <form action="/tasks/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      
+      <tr><td>ID</td><td><input type="text" name="id" value="<%= data.id %>"></td></tr>
+      <tr><td>タスク名</td><td><input type="text" name="task" value="<%= data.task %>"></td></tr>
+      <tr><td>期限</td><td><input type="text" name="kigen" value="<%= data.kigen %>"></td></tr>
+      <tr><td>詳細</td><td><input type="text" name="detail" value="<%= data.detail %>"></td></tr>
+    </table>
+    
+    <input type="submit" value="登録">
+  </form>
+  
+  <a href="/tasks/">タスク一覧に戻る</a>
+</body>
+</html>

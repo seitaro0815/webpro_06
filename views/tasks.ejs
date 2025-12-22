@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>タスク一覧</title>
+</head>
+<body>
+  <h2>タスク一覧</h2>
+  <table border="1">
+    <tr><th>ID</th><th>タスク名</th><th>期限</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr>
+          <td><%= row.id %></td>
+          <td><a href="/tasks/<%= number %>"><%= row.task %></a></td>
+          <td><%= row.kigen %></td>
+        </tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <br>
+  <a href="/tasks/create">タスクを追加する</a>
+</body>
+</html>

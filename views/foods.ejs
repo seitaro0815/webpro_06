@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>食材一覧</title>
+</head>
+<body>
+  <h2>賞味期限管理一覧</h2>
+  <table border="1">
+    <tr><th>ID</th><th>食べ物</th><th>賞味期限</th><th>個数</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr>
+          <td><%= row.id %></td>
+          <td><a href="/foods/<%= number %>"><%= row.name %></a></td>
+          <td><%= row.limit %></td>
+          <td><%= row.qty %></td>
+        </tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <br>
+  <a href="/foods/create">食材を追加する</a>
+</body>
+</html>

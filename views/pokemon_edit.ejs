@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %>の編集</title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/pokemon/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      
+      <tr><td>ID</td><td><input type="text" name="id" value="<%= data.id %>"></td></tr>
+      <tr><td>ポケモン名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>持ち物</td><td><input type="text" name="goods" value="<%= data.goods %>"></td></tr>
+      <tr><td>特性</td><td><input type="text" name="skill" value="<%= data.skill %>"></td></tr>
+      <tr><td>技</td><td><input type="text" name="move" value="<%= data.move %>"></td></tr>
+      <tr><td>性格</td><td><input type="text" name="nature" value="<%= data.nature %>"></td></tr>
+      <tr><td>努力値</td><td><input type="text" name="point" value="<%= data.point %>"></td></tr>
+      <tr><td>テラスタル</td><td><input type="text" name="teras" value="<%= data.teras %>"></td></tr>
+    </table>
+    
+    <input type="submit" value="更新">
+  </form>
+  
+  <br>
+  <a href="/pokemon/">一覧に戻る</a>
+</body>
+</html>

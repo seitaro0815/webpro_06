@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ポケモン登録</title>
+</head>
+<body>
+    <h1>育成ポケモンの登録</h1>
+    <form action="/pokemon" method="POST">
+        
+        <label for="name">ポケモン名:</label><br>
+        <input type="text" name="name" required><br>
+
+        <label for="goods">持ち物:</label><br>
+        <input type="text" name="goods"><br>
+
+        <label for="skill">特性:</label><br>
+        <input type="text" name="skill"><br>
+
+        <label for="move">技:</label><br>
+        <input type="text" name="move"><br>
+
+        <label for="nature">性格:</label><br>
+        <input type="text" name="nature"><br>
+
+        <label for="point">努力値:</label><br>
+        <input type="text" name="point"><br>
+
+        <label for="teras">テラスタル:</label><br>
+        <input type="text" name="teras"><br><br>
+
+        <input type="submit" value="登録">
+    </form>
+    <br>
+    <a href="/pokemon">一覧に戻る</a>
+</body>
+</html>

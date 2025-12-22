@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>タスク登録</title>
+</head>
+<body>
+    <form action="/tasks" method="POST">
+        
+        <input type="text" name="task" required>
+        <label for="task">タスク内容:</label><br>
+
+        <input type="text" name="kigen" required>
+        <label for="kigen">期限:</label><br>
+
+        <input type="text" name="detail">
+        <label for="detail">詳細:</label><br>
+
+        <input type="submit" value="登録">
+    </form>
+</body>
+</html>
