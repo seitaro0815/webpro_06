@@ -7,9 +7,9 @@ app.set('view engine', 'ejs');
 app.use("/public", express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 
-// ===================================================
+
 // 1. タスク管理 (Tasks)
-// ===================================================
+
 let tasks = [
   { id: 1, task: "レポート提出", kigen: "2025-01-28", detail: "Webプログラミングの仕様書" },
   { id: 2, task: "買い物", kigen: "2025-01-15", detail: "ガムテープが必要" },
@@ -62,9 +62,8 @@ app.get("/tasks/delete/:number", (req, res) => {
 });
 
 
-// ===================================================
 // 2. 賞味期限管理 (Foods)
-// ===================================================
+
 let foods = [
   { id: 1, name: "牛乳", limit: "2025-01-10", qty: "1本", memo: "特売" },
   { id: 2, name: "卵", limit: "2025-01-15", qty: "1パック", memo: "Lサイズ" },
@@ -118,9 +117,8 @@ app.get("/foods/delete/:number", (req, res) => {
 });
 
 
-// ===================================================
 // 3. ポケモン育成管理 (Pokemon)
-// ===================================================
+
 let pokemon = [
   { id: 1, name: "バドレックス（黒馬）", goods: "こだわりスカーフ", skill: "じんばいったい", move: "アストラルビット/サイコキネシス/おにび/トリック", nature: "おくびょう", point: "H124 B4 C212 D4 S164", teras: "ゴースト" },
   { id: 2, name: "ザシアン", goods: "くちたけん", skill: "ふとうのけん", move: "きょじゅうざん/じゃれつく/テラバースト/くさわけ", nature: "いじっぱり", point: "H204 A236 B4 D4 S60", teras: "じめん" },
@@ -171,7 +169,7 @@ app.post("/pokemon/update/:number", (req, res) => {
   pokemon[number].goods = req.body.goods;
   pokemon[number].skill = req.body.skill;
   pokemon[number].move = req.body.move;
-  pokemon[number].nature = req.body.nature; // 追加
+  pokemon[number].nature = req.body.nature;
   pokemon[number].point = req.body.point;
   pokemon[number].teras = req.body.teras;
   
@@ -184,7 +182,4 @@ app.get("/pokemon/delete/:number", (req, res) => {
 });
 
 
-// ---------------------------------------------------
-// サーバー起動
-// ---------------------------------------------------
 app.listen(8080, () => console.log("Example app listening on port 8080!"));
