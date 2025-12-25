@@ -62,7 +62,7 @@ app.get("/tasks/delete/:number", (req, res) => {
 });
 
 
-// 2. 賞味期限管理 (Foods)
+// 2. 食材管理 (Foods)
 
 let foods = [
   { id: 1, name: "牛乳", limit: "2025-01-10", qty: "1本", memo: "特売" },
